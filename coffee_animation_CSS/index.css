@@ -232,7 +232,7 @@ body{
   }
 }
 .box{
-  animation: moveRightAndRotate 2s ease infinite;
+  animation: moveImg 2s ease infinite;
   background-color: black;
   height: 200px;
   width: 200px;
@@ -245,7 +245,7 @@ body{
 
 }
 
-@keyframes moveRightAndRotate {
+@keyframes moveImg {
   0% {
     margin-left: 0;
     transform: translateX(0) rotate(0deg);
