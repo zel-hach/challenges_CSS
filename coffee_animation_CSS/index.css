@@ -1,10 +1,33 @@
 @media screen and (max-width:1200px) {
+
+    body{
+      /* height: 100vh; */
+      margin: auto;
+    }
     .container{
         flex-direction: column;
+        height: 100%;
+        width: 100%;
+        background-color: #0c3842;
     }
-    .line{
+    .container .line{
         visibility: hidden;
     }
+    .container .information_coffe .box2{
+      flex-direction:column;
+      animation: reverse_div_column 3s linear infinite;
+    }
+    @keyframes reverse_div_column {
+      0% {
+          flex-direction: column;
+      }
+      50% {
+          gap: 30px;
+      }
+      100% {
+          flex-direction: column-reverse;
+      }
+  }
 }
 body{
     background-image: url("./images/pngtree-coffee-beans-leaves-beans-background-image_2177928.jpeg");
@@ -16,13 +39,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: auto;
     min-height: 100vh;
 }
 .container{
     background-image: linear-gradient(to left,black,white);
     width: 75%;
-    height: 900px;
+    padding: 150px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,13 +207,7 @@ body{
       }
     
   }
-.line{
-    height: 99%;
-    width: 10px;
-    background-color: rgb(254, 249, 249);
-    border-radius: 5px;
-    border: 5px dashed #e28462 ;
-}
+
 .information_coffe div{
     display: flex;
     flex-direction: column;
@@ -217,7 +234,7 @@ body{
   color: #d4dcde;
   animation: reverse_div 3s ease-in-out infinite;
 }
-@keyframes reverse_div {
+/* @keyframes reverse_div {
   0%{
     flex-direction: row;
   }
@@ -230,7 +247,7 @@ body{
   100%{
     flex-direction: row-reverse;
   }
-}
+} */
 .box{
   animation: moveImg 2s ease infinite;
   background-color: black;
