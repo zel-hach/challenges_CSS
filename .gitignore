@@ -1,0 +1,25 @@
+./chat_app/chat_app_front/node_modules
+# Logs
+./chat_app/chat_app_front/logs
+./chat_app/chat_app_front/*.log
+./chat_app/chat_app_front/npm-debug.log*
+./chat_app/chat_app_front/./chat_app/chat_app_front/yarn-debug.log*
+./chat_app/chat_app_front/yarn-error.log*
+./chat_app/chat_app_front/pnpm-debug.log*
+./chat_app/chat_app_front/lerna-debug.log*
+
+
+./chat_app/chat_app_front/dist
+./chat_app/chat_app_front/dist-ssr
+./chat_app/chat_app_front/*.local
+
+# Editor directories and files
+./chat_app/chat_app_front/.vscode/*
+./chat_app/chat_app_front/!.vscode/extensions.json
+./chat_app/chat_app_front/.idea
+./chat_app/chat_app_front/.DS_Store
+./chat_app/chat_app_front/*.suo
+./chat_app/chat_app_front/*.ntvs*
+./chat_app/chat_app_front/*.njsproj
+./chat_app/chat_app_front/*.sln
+./chat_app/chat_app_front/*.sw?
