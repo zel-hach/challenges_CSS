@@ -23,3 +23,9 @@
 ./chat_app/chat_app_front/*.njsproj
 ./chat_app/chat_app_front/*.sln
 ./chat_app/chat_app_front/*.sw?
+./chat_app/dist
+./chat_app/node_modules
+./chat_app/backend_app_chat/build
+./chat_app/backend_app_chat/dist
+./chat_app/backend_app_chat/node_modules
+./chat_app/build
