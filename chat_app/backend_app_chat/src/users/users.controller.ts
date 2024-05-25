@@ -1,7 +1,6 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete, NotFoundException, Res, InternalServerErrorException, UnauthorizedException, Req } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { JwtService } from '@nestjs/jwt';
-import { Request, Response } from 'express';
 import { UserService } from './users.service';
 import { compare} from 'bcrypt';
 

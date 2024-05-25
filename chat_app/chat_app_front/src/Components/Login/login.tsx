@@ -1,21 +1,36 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function Login(props:any) {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
-    const go_to_Register = () => {
+    const navigate = useNavigate();
+    const go_to_Register = (e:any) => {
+        e.stopPropagation();
         props.setLogin(false)
     }
 
-    const Login = async () =>{
-        const response = await fetch("http://localhost:3000/users/login",{
-            method:"POST",
-            headers:{'Content-type':'application/json'},
-            body:JSON.stringify({
-                email,
-                password,
+    const Login = async (e:any) =>{
+        e.preventDefault();
+        try{
+            const response = await fetch("http://localhost:3000/users/login",{
+                method:"POST",
+                headers:{'Content-type':'application/json'},
+                body:JSON.stringify({
+                    email,
+                    password,
+                })
             })
-        })
+            const data = await response.json();
+            if(response.ok){
+                if(data.message === "succes")
+                {
+                    navigate("/Home");
+                }
+            }
+        }catch(e){
+            console.log(e);
+        }
     }
     return (
         <div className='flex flex-col items-center m-12 w-full'>

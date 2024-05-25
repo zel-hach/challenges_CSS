@@ -14,7 +14,7 @@ export class UserService {
   private readonly userRepository: Repository<Users>,) { }
 
   async create(createUserDto: CreateUserDto) {
-    const existUser = this.findUser(createUserDto.email);
+    const existUser = await this.findUser(createUserDto.email);
     if (existUser)
       return (0);
     const salt = await genSalt();
